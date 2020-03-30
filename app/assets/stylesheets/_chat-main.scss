@@ -1,0 +1,101 @@
+.chat-main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color: $white;
+  float: left;
+  .main-header {
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px $line;
+    .main-header__left-items {
+      margin-top: 35px;
+      &__group {
+        font-size: 20px;
+        color: $dark_brack;
+        margin-bottom: 15px;
+      }
+      &__member {
+        display: flex;
+        font-size: 12px;
+        color: $light_brack;
+      }
+   }
+    .edit-btn {
+      color: $btn;
+      font-size: 16px;
+      padding: 0px 20px;
+      line-height: 40px;
+      border: solid 1px;
+      position: absolute;
+      right: 40px;
+      margin-top: 28px;
+      text-decoration: none;
+    }
+  }
+  .messages {
+    background-color: $message-back;
+    height: calc(100vh - 100px - 90px);
+    padding: 35px 40px;
+    .message-info {
+      display: flex;
+      margin-bottom: 12px;
+      .message-info__contributor {
+        font-size: 16px;
+        color: $dark_brack;
+        padding-right: 5px;
+        
+      }
+      .message-info__date {
+        font-size: 12px;
+        color: $light_brack;
+      }
+    }
+    .message-text {
+      font-size: 14px;
+      color: $message;
+      margin-bottom: 46px;
+    }
+    
+  }
+  .form {
+    background-color: $form-back;
+    height: 90px;
+    padding: 20px 40px;
+    .new-message {
+      display: flex;
+      .input-box {
+        display: flex;
+        position: relative;
+        margin-right: 10px;
+        width: 100%;
+        &__text {
+          height: 50px;
+          width: 100%;
+          color: $message;
+          padding: 0 40px 0 10px;
+        }
+        &__image {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 1.3rem;
+          cursor: pointer;
+          &__file {
+            display: none;
+          }
+
+        }
+      }
+    }
+    .submit-btn {
+      background-color: $btn;
+      color: $white;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
+    }
+  }
+
+}
