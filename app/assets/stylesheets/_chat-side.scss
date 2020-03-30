@@ -2,14 +2,14 @@
   width: 300px;
   height: 100vh;
   float: left;
-  background-color: #253141;
+  background-color: $dark_blue;
   .side-header {
    height: 100px;
    align-items: center;
    display: flex;
    padding: 0 20px;
    font-size: 16px;
-   color: #ffffff;
+   color: $white;
    &__box{
     display: flex;
     width: 260px; 
@@ -20,7 +20,7 @@
         li {
           margin-left: 5px;
           a {
-            color: #ffffff;
+            color: $white;
 
           }
 
@@ -30,12 +30,12 @@
    }
   }
   .groups {
-    background-color: #2f3e51;
+    background-color: $light_blue;
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
   
     .group {
-      color: #ffffff;
+      color: $white;
       text-decoration: none;
       &__group-name {
         font-size: 15px;
