@@ -37,12 +37,13 @@
     .group {
       color: $white;
       text-decoration: none;
+     
       &__group-name {
-        font-size: 15px;
+      font-size: 15p;
       }
       &__group-new-message {
-        font-size: 11px;
-        margin-bottom: 40px;
+      font-size: 11px;
+      margin-bottom: 40px;
       }
     }
   }
