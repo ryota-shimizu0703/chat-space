@@ -3,37 +3,29 @@
   .main-header
     .main-header__left-items
       %p.main-header__left-items__group
-        test
+        = @group.name
       %ul.main-header__left-items__member
         Member :
         %li.main-header__left-items__member-list
-          shimizu
+          - @group.users.each do |user|
+            = user.name
+            
+
 
     .main-header__edit-btn
-      = link_to "#", class: "edit-btn" do
+      = link_to edit_group_path(@group.id), class: "edit-btn" do
         Edit
         
-  .messages 
-    .message-info
-      %p.message-info__contributor
-        shimizu
-      %p.message-info__date
-        2020/03/29(Sun) 17:43:01
-    .message-text
-      こんにちは
-    .message-info
-      %p.message-info__contributor
-        shimizu
-      %p.message-info__date
-        2020/03/29(Sun) 17:43:01
-    .message-text
-      こんにちは
+  .messages
+    = render @messages
+
+  
 
   .form
-    .new-message
+    = form_for [@group, @message] do |f|
       .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn", value: "Send"}
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
