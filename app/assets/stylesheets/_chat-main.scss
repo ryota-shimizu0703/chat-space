@@ -38,6 +38,7 @@
     background-color: $message-back;
     height: calc(100vh - 100px - 90px);
     padding: 35px 40px;
+    overflow: scroll;
     .message-info {
       display: flex;
       margin-bottom: 12px;
@@ -56,14 +57,17 @@
       font-size: 14px;
       color: $message;
       margin-bottom: 46px;
+  
     }
+    
+    
     
   }
   .form {
     background-color: $form-back;
     height: 90px;
     padding: 20px 40px;
-    .new-message {
+    form {
       display: flex;
       .input-box {
         display: flex;
@@ -75,6 +79,7 @@
           width: 100%;
           color: $message;
           padding: 0 40px 0 10px;
+          
         }
         &__image {
           position: absolute;
